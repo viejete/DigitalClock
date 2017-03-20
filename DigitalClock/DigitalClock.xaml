@@ -1,0 +1,31 @@
+﻿<Window x:Class="DigitalClock.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DigitalClock"
+        mc:Ignorable="d"
+        Title="Digital Clock" Width="400" Height="350">
+    <Grid>
+        <TextBlock x:Name="timerLabel" TextAlignment="Center" FontSize="40" FontFamily="Comic Sans MS Bold" TextWrapping="Wrap" Width="250" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="72,96,70,168"/>
+        <Menu x:Name="menu" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="Auto" >
+            <MenuItem Header="Fitxer">
+                <MenuItem Header="Sortir" Click="clickSortir"/>
+            </MenuItem>
+            <MenuItem Header="Alarma">
+                <MenuItem  Name="alarmaActivada" Header="Activada" IsCheckable="True" />
+            </MenuItem>
+            <MenuItem Header="Paisos">
+                <MenuItem Click="afegirPais" Header="Afegir pais..."/>
+                <MenuItem Click="eliminarPais" Header="Eliminar pais..." />
+            </MenuItem>
+            <MenuItem Header="Ajuda">
+                <MenuItem Header="Sobre aquest programa" Click="clickSobre" />
+            </MenuItem>
+        </Menu>
+        <TextBox x:Name="alarmaBox" HorizontalAlignment="Left" Height="23" Margin="138,157,0,0" TextWrapping="Wrap" TextAlignment="Center" Text="00:00:00" VerticalAlignment="Top" Width="120"/>
+        <TextBlock x:Name="relojSecundario" TextAlignment="Center" FontSize="40" FontFamily="Comic Sans MS Bold" TextWrapping="Wrap" Width="180" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10,218,202,37" Height="65"/>
+        <ComboBox x:Name="boxDiferencia" HorizontalAlignment="Left" Margin="22,288,0,0" VerticalAlignment="Top" Width="120"/>
+
+    </Grid>
+</Window>
